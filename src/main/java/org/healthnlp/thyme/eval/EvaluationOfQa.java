@@ -221,6 +221,10 @@ TemporalExtractionPipeline_ImplBase {
               break;
             }
           }
+          if(sysArg1 == null){
+            System.out.println("Found argument at the right place but with the wrong type -- counting as argError.");
+            argError = true;
+          }
         }
 
         // check for arg2:
@@ -242,6 +246,10 @@ TemporalExtractionPipeline_ImplBase {
               sysArg2 = e;
               break;
             }
+          }
+          if(sysArg2 == null){
+            System.out.println("Found argument at the right place but with the wrong type -- counting as argError.");
+            argError = true;
           }
         }
 
